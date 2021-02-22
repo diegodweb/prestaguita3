@@ -20,12 +20,10 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="./assets/demo/demo.css" rel="stylesheet" />
   <link href="./assets/css/estilo.css" rel="stylesheet" />
+  <link href="./assets/css/range.css" rel="stylesheet" />
 </head>
 
 <body class="index-page sidebar-collapse">
-  
-
-
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
     id="sectionsNav">
     <div class="container">
@@ -33,21 +31,17 @@
         <img src="./assets/img/logo.png" class="img-fluid logo ocultar-div">
         <img src="./assets/img/logo.png" class="img-fluid logo-web ocultar">
         <div class="navbar-nav margen ocultar-div">
-        <div class="nav-item ">
-          <a class="nav-link redes" data-placement="bottom"
-            href="https://www.facebook.com/prestaguita2020"  target="_blank" data-original-title="Like us on Facebook"
-            rel="nofollow">
-            <i class="fa fa-facebook-square"></i>
-          </a>
-     
-          <a class="nav-link redes" data-placement="bottom"
-            href="https://www.instagram.com/presta.guita/" 
-            data-original-title="Follow us on Instagram" rel="nofollow" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
+          <div class="nav-item ">
+            <a class="nav-link redes" data-placement="bottom" href="https://www.facebook.com/prestaguita2020"
+              target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            <a class="nav-link redes" data-placement="bottom" href="https://www.instagram.com/presta.guita/"
+              data-original-title="Follow us on Instagram" rel="nofollow" target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
         </div>
-      </div>
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -68,6 +62,11 @@
               <i class="material-icons">question_answer</i> preguntas frecuentes
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">
+              <i class="material-icons">contact_page</i> contactanos
+            </a>
+          </li>
           <li class="nav-item ocultar">
             <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
               href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook"
@@ -86,6 +85,23 @@
       </div>
     </div>
   </nav>
+  <div class="posicion">
+    <a href="whatsapp://send?text=Hola, estoy interesado en un prestamo &phone=+5491126654754&abid=+5491126654754"
+    class="btn btn-fab whatsapp btn-success btn-round" data-aos="zoom-in-up" data-aos-duration="1000">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+  </div>
+  <div class="col-12 posicion1 text-center">
+    <a href="contacto.html" class="btn btn-round prestamo btn btn-warning" data-aos="fade-zoom-in" data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000" data-aos-delay="800">
+      SOLICITALO AHORA!
+    </a>
+  </div>
+  <div class="posicion2">
+    <a href="tel:+541126654754" class="btn btn-fab telefono btn-round" data-aos="zoom-in-up" data-aos-duration="1000">
+      <i class="fa fa-phone"></i>
+    </a>
+  </div>
   <div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/portada3.jpg')">
     <div class="container">
       <div class="row">
@@ -104,187 +120,55 @@
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
             <h2 class="title text-warning">Simulador de préstamo</h2>
-            <h5 class="description">En esta sección podés calcular la cuota a pagar de acuerdo al monto buscado y la manera que te sea más cómoda.</h5><br>
-            <div class="posicion">
-              <a href="whatsapp://send?text=Hola, estoy interesado en un prestamo &phone=+5491126654754&abid=+5491126654754" class="btn btn-fab whatsapp btn-success btn-round" data-aos="zoom-in-up" data-aos-duration="1000">
-                <i class="fa fa-whatsapp"></i>
-              </a>
-            </div>
-            <div class="posicion2">
-              <a href="tel:+541126654754" class="btn telefono btn-tel btn-round" data-aos="zoom-in-up" data-aos-duration="1000">
-                <i class="fa fa-phone"></i>&nbsp &nbsp llamanos
-              </a>
-            </div>
-            <form class="formulario center ">
-              <h4><span>¿Cuánto necesitas?</span></h4><br>
-              <input type="range" name="importe" min="5000" max="30000" step="1000" value="1000" id="myRange">
-              <p class="calculador">$ <span id="demo"></span></p><br>
-
-              <h4><span>¿En Cuántas cuotas queres pagarlo?</span></h4><br>
-              <span class="texto">
-                <p class="range-field">
-                  <input type="range" name="anos" min="4" max="12" step="1" value="4" id="myRange2">
-                </p>
-              </span>
-              <p class="calculador">Cuotas: <span id="demo2"></span></p>
-              <br><br>              
-                <button class="btn color btn-warning" type="button" value="Calcular" id="boton"
-                  onclick="calcular()">CALCULAR</button>             
-            </form>
-            <div class="resultado ">
-              <h4><span>Pagás por semana:</h4></span>
-              <div class="calculadorFinal">
-                <span id="resultado" ></span>
+            <h5 class="description">En esta sección podés calcular la cuota a pagar de acuerdo al monto buscado y la
+              manera que te sea más cómoda.</h5>
+            <form class="center">
+              <h3 class="espacioTitulo">¿Cuánto necesitas?</h3>
+              <div class="range-slider"
+                style='--min:5000; --max:30000; --step:1000; --value:10000; --text-value:"10000"; --prefix:"$"'>
+                <input type="range" min="5000" max="30000" step="1000" value="10000" name="importe"
+                  oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify(this.value))">
+                <output></output>
+                <div class='range-slider__progress'></div>
               </div>
-            </div>
-            
-          
-          </div>
-        </div>
-      </section>
-      <section class="text-center">
-        <h2 class="title text-warning">¿Cómo funciona?</h2>
-        <div class="features">
-          <div class="row">
-            <!-- <div class="col-lg-6 col-md-8">
-              <ul class="nav nav-pills nav-pills-icons" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link" href="#dashboard-1" role="tab" data-toggle="tab">
-                    <i class="material-icons">dashboard</i>
-                    Dashboard
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="#schedule-1" role="tab" data-toggle="tab">
-                    <i class="material-icons">schedule</i>
-                    Schedule
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
-                    <i class="material-icons">list</i>
-                    Tasks
-                  </a>
-                </li>
-              </ul>
-              <div class="tab-content tab-space">
-                <div class="tab-pane active" id="dashboard-1">
-                  Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
-                  <br><br>
-                  Dramatically visualize customer directed convergence without revolutionary ROI.
+              <h3 class="espacioTitulo">¿En Cuántas semanas?</h3>
+              <div class="range-slider grad" style='--min:4; --max:12; --step:1; --value:6; --text-value:"6";'>
+                <input type="range" min="4" max="12" step="1" value="6" name="anos"
+                  oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+                <output></output>
+                <div class='range-slider__progress'></div>
+              </div>
+              <div class="espacioMenor">
+                <div class="calculadorFinal">
+                  Pagás por semana:<span id="resultado"></span>
                 </div>
-                <div class="tab-pane" id="schedule-1">
-                  Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
-                  <br><br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                </div>
-                <div class="tab-pane" id="tasks-1">
-                  Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
-                  <br><br>Dynamically innovate resource-leveling customer service for state of the art customer service.
-                </div>
+              </div>
+              <div class="espacioSimulador">
+                <button class="btn color btn-warning btn-sm espacio" type="button" value="Calcular" id="boton"
+                  onclick="calcular()">CALCULAR</button>
+              </div>
+            </form>
+            <!-- <div class="resultado">
+              <div class="calculadorFinal">
+                Pagás por semana:<span id="resultado"></span>
               </div>
             </div> -->
-            <!-- <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">local_atm</i>
-                </div>
-                <h4 class="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A
-                  paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">event</i>
-                </div>
-                <h4 class="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A
-                  paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">phone_in_talk</i>
-                </div>
-                <h4 class="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A
-                  paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">event_available</i>
-                </div>
-                <h4 class="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A
-                  paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-success">
-                  <i class="material-icons">grading</i>
-                </div>
-                <h4 class="info-title">Verified Users</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A
-                  paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-danger">
-                  <i class="material-icons">fact_check</i>
-                </div>
-                <h4 class="info-title">Fingerprint</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A
-                  paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-          </div> -->
+          </div>
         </div>
       </section>
-     
 
-      <div class="section section-contacts ">
-        <!-- <div class="row">
+      <section>
+        <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="text-center title">Work with us</h2>
-            <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few
-              lines about each one and contact us about any further collaboration. We will responde get back to you in a
-              couple of hours.</h4>
-            <form class="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Your Name</label>
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Your Email</label>
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
-                <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
-              </div>
-              <div class="row">
-                <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class="btn btn-primary btn-raised">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
+            <h2 class="text-center title text-warning">¿Cómo funciona?</h2>
+
           </div>
-        </div> -->
-      </div>
+        </div>
+      </section>
+
+
+
+
     </div>
   </div>
   <footer class="footer footer-default">
@@ -321,6 +205,10 @@
         <a href="#" target="_blank">Creative Tim</a> for a better web.
       </div>
     </div>
+
+
+
+
   </footer>
   <!--   Core JS Files   -->
 
