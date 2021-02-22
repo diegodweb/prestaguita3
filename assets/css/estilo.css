@@ -1,11 +1,10 @@
-
-.logo{
+.logo {
   width: 10em;
   position: absolute;
 }
 
-.logo-web{
-  width: 10em; 
+.logo-web {
+  width: 10em;
 }
 
 
@@ -61,7 +60,17 @@
 
 }
 
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
   font-family: "Roboto" !important;
 }
 
@@ -79,7 +88,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 }
 
 /* SLIDER*/
-
+/* 
 input[type='range'] {
   width: 80%;
 }
@@ -109,42 +118,57 @@ input[type=range]::-webkit-slider-thumb:active {
 input[type=range]::-webkit-slider-runnable-track {
   background-color: #ef7a2c;
   height: 2px;
-}
+} */
 
 
 
 /* BOTON FLOTANTE DE WHATSAPP */
 
-.posicion2 {
-  position: fixed;
-  bottom: 3%;
-  left: 5%;
-  z-index: 1;
- 
-}
-
-.telefono {
-  height: 2.4em;
-  width: 10em;
-  background-color:#f4ea62;
-  font-size: 14px;
-  margin: 5px;
-  padding: 8px;
-  color: #ef7a2c;
-}
-
-
 .posicion {
   position: fixed;
   bottom: 2%;
   right: 5%;
-  z-index: 1;
+  z-index: 5;
+}
+
+.posicion1 {
+  position: fixed;
+  bottom: 3.5%;
+  z-index: 4;
+
+}
+
+.posicion2 {
+  position: fixed;
+  bottom: 2%;
+  left: 5%;
+  z-index: 5;
+}
+
+.telefono {
+  height: 2em;
+  width: 2em;
+  background-color: #f4ea62;
+  color: #ef7a2c;
 }
 
 .whatsapp {
   height: 2em;
   width: 2em;
   background-color: #00bb2d;
+}
+
+.prestamo {
+  position: relative;
+  padding: 8px 20px;
+  margin: 0.3125rem 1px;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.428571;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  background-color: #ef7a2c
 }
 
 .btn.btn-fab,
@@ -171,42 +195,43 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 
-.calculador{
+.calculador {
   background-color: #ef7a2c;
   font-size: 18px;
-  color:#f4ea62;
+  color: #f4ea62;
   font-weight: 600;
   padding: 6px;
   width: 110px;
   margin-top: 20px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 12px;
   box-shadow: 0 4px 18px 0px rgb(0 0 0 / 12%), 0 7px 10px -5px rgb(0 0 0 / 15%);
 }
 
-.calculadorFinal{
+.calculadorFinal {
   background-color: #f4ea62;
-  font-size: 22px;
-  color:#ef7a2c;
+  font-size: 20px;
+  color: #ef7a2c;
   font-weight: 600;
-  padding: 6px;
-  width: 120px;
-  margin-top: 20px;
-  margin-left:auto;
-  margin-right:auto;
+  height: 2.5rem;
+  width: 280px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 18px 0px rgb(0 0 0 / 12%), 0 7px 10px -5px rgb(0 0 0 / 15%);
 }
 
-.margen{
+.margen {
   margin-left: 60%;
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
-.nav-link.redes{
-  display:inline-block;
+.nav-link.redes {
+  display: inline-block;
   padding: 0.5rem !important;
   text-decoration: none;
   flex-direction: row;
@@ -218,11 +243,11 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 
-@media all and (max-width: 991px){
-.navbar-collapse .navbar-nav .nav-item .nav-link {
-  color: #ef7a2c;
-  margin: 5px 15px;
-}
+@media all and (max-width: 991px) {
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: #ef7a2c;
+    margin: 5px 15px;
+  }
 }
 
 .navbar .navbar-toggler .navbar-toggler-icon {
@@ -236,44 +261,50 @@ input[type=range]::-webkit-slider-runnable-track {
   background-position: top center;
 }
 
-.color{
-  background-color:#f4ea62;
+.color {
+  background-color: #f4ea62;
   color: #ef7a2c;
   font-size: 16px;
   font-weight: 500;
 }
 
-.resultado{
- 
-  height: 150px;
+.resultado {
+  padding-bottom: 5rem;
 }
 
-#resultado{
+#resultado {
   background-color: #f4ea62;
-  
-  color:#ef7a2c;
-  
-  padding: 6px;
-  
-  
-  box-shadow: 0 4px 18px 0px rgb(0 0 0 / 12%), 0 7px 10px -5px rgb(0 0 0 / 15%);
+  color: #ef7a2c;
+  padding: 2px;
 }
 
-/* .nav-pills .nav-item .nav-link.active {
-  color: #ffffff;
-  background-color: #ef7a2c;
-  box-shadow: 0 5px 20px 0px rgb(0 0 0 / 20%), 0 13px 24px -11px rgb(156 39 176 / 60%);
+.espacio {
+  padding: 2rem;
 }
 
-.nav-pills .nav-item .nav-link {
-  line-height: 24px;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  min-width: 50px; 
-  text-align: center;
-  color: #555;
-  transition: all .3s;
-  border-radius: 30px;
-  padding: 5px !important;
-} */
+.espacioMenor {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.espacioTitulo {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.espacioSimulador {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+
+
+.btn.btn-sm,
+.btn-group-sm>.btn,
+.btn-group-sm .btn {
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+
+  border-radius: 0.4rem;
+}
